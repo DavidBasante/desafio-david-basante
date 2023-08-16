@@ -46,8 +46,7 @@ class CaixaDaLanchonete {
             } else {
                 quantidadeItens[codigoItem] = quantidade;
             }
-
-            // Verificar se item extra foi pedido sem o principal
+            
             if (this.cardapio[codigoItem].item.includes("extra") && !this.temNoCardapio(codigoItem.replace("extra", ""))) {
                 return "Item extra não pode ser pedido sem o principal";
             }
